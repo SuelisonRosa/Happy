@@ -21,7 +21,7 @@ const popup = L.popup({
     minWidth: 240,
     minHeight: 240
 })
-.setContent('Lar das meninas <a href="day-care-center.html?id=1" class="choose-day-care-center "> <img src="./public/images/arrow-white.svg" > </a>')
+.setContent('Carmem Mirim <a href="day-care-center.html?id=1" class="choose-day-care-center "> <img src="./public/images/arrow-white.svg" > </a>')
 
 
 
