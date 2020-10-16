@@ -19,3 +19,15 @@ main {
     background: #F5F8FA;
     border-radius: 0 0 20px 0;
 }
+
+.input-block .images button {
+    border: 1px dashed #96d2f0;
+    width: 100%;
+    background: #F5F8FA;
+    height: 6.4rem;
+    padding: 0 1.6rem;
+    margin-top: 2.4rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
