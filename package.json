@@ -1,0 +1,20 @@
+{
+  "name": "NLW3",
+  "version": "1.0.0",
+  "description": "Aplicação que conecta pessoas com creches da cidade de Camaçari, feito durante a Next Level Week #3 com algumas alterações",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuelisonRosa/Happy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuelisonRosa/Happy/issues"
+  },
+  "homepage": "https://github.com/SuelisonRosa/Happy#readme"
+}
