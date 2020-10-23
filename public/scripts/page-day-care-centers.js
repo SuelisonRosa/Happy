@@ -7,7 +7,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
     
 // create icon and
 const icon = L.icon({
-    iconUrl:"./public/images/map-marker.svg",
+    iconUrl:"/images/map-marker.svg",
     iconSize: [58, 68],
     iconAnchor: [29, 68],
     popupAnchor: [170, 2]
@@ -21,7 +21,7 @@ const popup = L.popup({
     minWidth: 240,
     minHeight: 240
 })
-.setContent('Carmem Mirim <a href="day-care-center.html?id=1" class="choose-day-care-center "> <img src="./public/images/arrow-white.svg" > </a>')
+.setContent('Carmem Mirim <a href="day-care-center?id=1" class="choose-day-care-center "> <img src="/images/arrow-white.svg" > </a>')
 
 
 
