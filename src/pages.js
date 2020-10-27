@@ -1,4 +1,5 @@
 module.exports = {
+
     index(req, res,) {
         return res.render('index')
     },
@@ -13,7 +14,7 @@ dayCareCenters(req, res){
 
 },
 
-CreateDayCareCenter(req, res){
+createDayCareCenter(req, res){
     return res.render('create-day-care-center')
 }
 
