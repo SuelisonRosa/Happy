@@ -13,20 +13,37 @@ const icon = L.icon({
     popupAnchor: [170, 2]
 })
 
-// create popup overlay
 
-const popup = L.popup({
-    closebutton:false,
-    className: "map-popup",
-    minWidth: 240,
-    minHeight: 240
+function addMarker({id, name, lat, lng}) {
+    
+    // create popup overlay
+
+    const popup = L.popup({ 
+        closebutton:false,
+        className: "map-popup",
+        minWidth: 240,
+        minHeight: 240
+    }).setContent(`${name} <a  href="/day-care-center?id=${id}"><img src="/images/arrow-white.svg"></a>`)
+
+
+
+    // create and add marker
+    L
+    .marker([lat, lng], {icon}) 
+    .addTo(map)
+    .bindPopup(popup)
+
+}
+   
+const dayCareCentersSpan = document.querySelectorAll('.dayCareCenters span') 
+
+dayCareCentersSpan.forEach(span => {
+    const dayCareCenter = {
+        id: span.dataset.id,
+        name: span.dataset.name,
+        lat: span.dataset.lat,
+        lng: span.dataset.lng
+    }
+
+    addMarker(dayCareCenter)
 })
-.setContent('Carmem Mirim <a href="day-care-center?id=1" class="choose-day-care-center "> <img src="/images/arrow-white.svg" > </a>')
-
-
-
-// create and add marker
-L
-.marker([-12.7055438,-38.2989238], {icon}) 
-.addTo(map)
-.bindPopup(popup)

@@ -1,3 +1,5 @@
+const dayCareCenters = require('./database/fakedata.js');
+ 
 module.exports = {
 
     index(req, res,) {
@@ -9,7 +11,7 @@ dayCareCenter(req, res) {
 },
 
 dayCareCenters(req, res) {
-    return res.render('day-care-centers')
+    return res.render('day-care-centers', {dayCareCenters})
 },
 
 createDayCareCenter(req, res) {
