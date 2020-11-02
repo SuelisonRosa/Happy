@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carmem Mirim| Happy</title>
+    <title>{{dayCareCenter.name}} | Happy</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -38,38 +38,17 @@
      </aside>
      <main class="animate-appear with-sidebar">
        <div class="day-care-center-details">
-         <img src="/images/Frente_Carmem_Mirim.jpg" alt="Carmem Mirim">
-
+         <img src="{{dayCareCenter.firstImage}}" alt="{{dayCareCenter.name}}">
+  
          <div class="images">
-           
+           {{#each dayCareCenter.images}}
            <button onclick="selectImage(event)" class="active" type="button">
-             <img src="/images/Frente_Carmem_Mirim.jpg" alt="Carmem Mirim">
-           </button>
-
-           <button onclick="selectImage(event)" type="button">
-            <img src="/images/Frente_Carmem_Mirim.jpg" alt="Carmem Mirim">
-          </button>
-
-          <button onclick="selectImage(event)" type="button">
-            <img src="/images/Frente_Carmem_Mirim.jpg" alt="Carmem Mirim">
-          </button>
-
-          <button onclick="selectImage(event)" type="button">
-            <img src="/images/Frente_Carmem_Mirim.jpg" alt="Carmem Mirim">
-          </button>
-
-          <button onclick="selectImage(event)" type="button">
-            <img src="/images/Frente_Carmem_Mirim.jpg" alt="Carmem Mirim">
-          </button>
-
-          <button onclick="selectImage(event)" type="button">
-            <img src="/images/Frente_Carmem_Mirim.jpg" alt="Carmem Mirim">
-          </button>
-
-
+             <img src="{{this}}" alt="{{dayCareCenter.name}}">
+           </button> 
+           {{/each}}
          </div>
          <div class="day-care-center-details-content">
-           <h1>Carmem Mirim</h1>
+           <h1>{{dayCareCenter.name}}</h1>
 
            <p>Presta assistência a crianças de 06 a 15 anos que se encontre em situação de risco e/ou vulnerabilidade social.</p>
 
