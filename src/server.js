@@ -6,6 +6,11 @@ const pages = require('./pages.js');
 // iniciando o express
 const server = express()
 server
+
+// utilizar body do req
+.use(express.urlencoded({extended: true}))
+
+// utilizando arquivos estáticos
 .use(express.static('public'))
 
 // configurar template engine
@@ -17,6 +22,7 @@ server
 .get('/day-care-center', pages.dayCareCenter) 
 .get('/day-care-centers', pages.dayCareCenters) 
 .get('/create-day-care-center', pages.createDayCareCenter) 
+.post('/save-day-care-center', pages.saveCreateDayCareCenter) 
 
 // ligar o servidor 
 server.listen(5500)
